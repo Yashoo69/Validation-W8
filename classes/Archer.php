@@ -15,7 +15,7 @@ class Archer extends Character
     public function turn($target) {
         $rand = rand(1, 10);
         if ($this->arrow == 0) {
-            $status = $this->attackDague($target);
+            $status = $this->daggerAttack($target);
         } else if ($rand > 3 ) {
             $status = $this->attack($target);
         }else if ($rand <= 3 ) {
@@ -25,7 +25,7 @@ class Archer extends Character
     }
 
     
-    public function attackDague($target) {
+    public function daggerAttack($target) {
         $damage = 10; 
         $target->setHealthPoints($damage);
         $status = "$this->name lance une Frappe Latérale à $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
