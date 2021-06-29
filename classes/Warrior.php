@@ -7,8 +7,9 @@ class Warrior extends Character
     }
 
     public function attack($target) {
-        $target->setHealthPoints($this->damage);
-        $status = "$this->name lance Fulgurance sur  $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+        $damage = rand(15, 25);
+        $target->setHealthPoints($damage);
+        $status = "$this->name lance Fulgurance sur $target->name et inflige $damage points de dégats ! Il reste $target->healthPoints points de vie à $target->name !";
         return $status;
     }
 }

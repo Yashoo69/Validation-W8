@@ -32,11 +32,11 @@ class Archer extends Character
             $DamageCritic = $this->damage * $rand;
             $target->setHealthPoints($DamageCritic);
             $this->arrow -= 1;
-            $status = "$this->name lance Morsure de mangouste sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+            $status = "$this->name lance Morsure de mangouste sur $target->name et inflige $DamageCritic points de dégats ! Il reste $target->healthPoints points de vie à $target->name !";
         } else{
             $target->setHealthPoints($this->damage);
             $this->arrow -= 1;
-            $status = "$this->name lance un Tir du Cobra sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+            $status = "$this->name lance un Tir du Cobra sur $target->name et inflige $this->damage points de dégats ! Il reste $target->healthPoints points de vie à $target->name !";
         }
         return $status;
     }
