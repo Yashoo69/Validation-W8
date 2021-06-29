@@ -24,7 +24,7 @@ class Archer extends Character
 
     public function deathArrow() {
         $this->deathArrow= true;
-        $status = "$this->name touche son adversaire et lui inflige un coup critique !";
+        $status = "$this->name touche son adversaire avec un Tir Mortel, et lui inflige un coup critique !";
         return $status;
     }
 
