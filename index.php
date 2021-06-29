@@ -5,9 +5,9 @@ spl_autoload_register(function ($class) {
     require 'classes/' . $class . '.php';
 });
 
-$player1 = new Warrior('Cloup');
-$player2 = new Magician('Vivi');
-$player3 = new Archer('Thomas');
+$player1 = new Warrior('Medivh');
+$player2 = new Magician('Gul\'dan');
+$player3 = new Archer('Sylvanas');
 ?>
 
 <!DOCTYPE html>
