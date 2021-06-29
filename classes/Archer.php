@@ -28,7 +28,7 @@ class Archer extends Character
     public function attack($target) {
         if ($this->deathArrow) {
             $this->deathArrow = false;
-            $rand = rand(15, 30)/10;
+            $rand = rand(10, 30)/10;
             $DamageCritic = $this->damage * $rand;
             $target->setHealthPoints($DamageCritic);
             $this->arrow -= 1;
@@ -43,7 +43,8 @@ class Archer extends Character
 
     
     public function attackDague($target) {
-        $target->setHealthPoints($this->damage/2);
+        $damage = 10; 
+        $target->setHealthPoints($damage);
         $status = "$this->name lance une Frappe Latérale à $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
         return $status;
     }
