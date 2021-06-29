@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player1 {
+    color: red;
+}
+
+#player2 {
+    color: royalblue;
+}
+
+.result {
+    color: white
+}

@@ -5,7 +5,7 @@ class Magician extends Character
     private $shield = false;
 
     public function __construct($name) {
-        Character::__construct($name);
+        parent::__construct($name);
         $this->damage = 5;
         $this->magicPoints *= 2;
     }
