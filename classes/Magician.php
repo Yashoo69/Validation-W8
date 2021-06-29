@@ -32,13 +32,13 @@ class Magician extends Character
             $this->magicPoints -= $magicCost;
         }
         $target->setHealthPoints($magicBoltDamage);
-        $status = "$this->name lance un éclair magique sur $target->name à qui il reste $target->healthPoints points de vie ! Il reste $this->magicPoints points de magie à $this->name !";
+        $status = "$this->name lance une Chaos Bolt sur $target->name à qui il reste $target->healthPoints points de vie ! Il reste $this->magicPoints points de magie à $this->name !";
         return $status;
     }
 
     public function shield() {
         $this->shield = true;
-        $status = "$this->name lancer un bouclier magique pour se protéger !";
+        $status = "$this->name lancer son bouclier divin pour se protéger !";
         return $status;
     }
 

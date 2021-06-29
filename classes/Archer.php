@@ -35,18 +35,18 @@ class Archer extends Character
             $DamageCritic = $this->damage * $rand;
             $target->setHealthPoints($DamageCritic);
             $this->arrow -= 1;
-            $status = "$this->name tire une fleche surpuissante sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+            $status = "$this->name lance Morsure de mangouste sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
         } else{
             $target->setHealthPoints($this->damage);
             $this->arrow -= 1;
-            $status = "$this->name tire une fleche sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+            $status = "$this->name lance un Tir du Cobra sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
         }
         return $status;
     }
 
     public function attackDague($target) {
         $target->setHealthPoints($this->damage/2);
-        $status = "$this->name donne un coup de dague à $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+        $status = "$this->name lance une Frappe Latérale à $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
         return $status;
     }
 }
