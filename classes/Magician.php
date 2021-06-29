@@ -6,8 +6,8 @@ class Magician extends Character
 
     public function __construct($name) {
         parent::__construct($name);
-        $this->damage = 5;
-        $this->magicPoints *= 2;
+        $this->damage = 10;
+        $this->magicPoints *= 3;
     }
 
     public function turn($target) {

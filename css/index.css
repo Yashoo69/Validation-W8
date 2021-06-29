@@ -1,7 +1,8 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: black;
+    font-size: x-large;
+    
 }
 
 body {
@@ -9,21 +10,24 @@ body {
 }
 
 main {
+    background-image: url(https://images2.alphacoders.com/104/1049851.jpg);
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #player1 {
     color: red;
 }
 
-#player2 {
-    color: royalblue;
-}
-
 .result {
-    color: white
+    border: 3px solid;
+    padding: 10px;
+    border-radius: 10px 10px 10px;
+    color: white;
 }

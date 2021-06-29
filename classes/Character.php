@@ -3,9 +3,9 @@
 
 abstract class Character
 {
-    protected $healthPoints = 100;
-    protected $magicPoints = 20;
-    public $damage = 15;
+    protected $healthPoints = 150;
+    protected $magicPoints = 80;
+    public $damage = 20;
     public $name;
 
     public function __construct($name) {

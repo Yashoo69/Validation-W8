@@ -2,13 +2,15 @@
 
 class Archer extends Character
 {
-    public $deathArrow = false ;
+    public $deathArrow = false;
+
     
     public function __construct($name) {
         parent::__construct($name);
-        $this->damage = 20;
-        $this->arrow = 7;
+        $this->damage = 25;
+        $this->arrow = 15;
     }
+
 
     public function turn($target) {
         $rand = rand(1, 10);
@@ -22,11 +24,6 @@ class Archer extends Character
         return $status;
     }
 
-    public function deathArrow() {
-        $this->deathArrow= true;
-        $status = "$this->name touche son adversaire avec un Tir Mortel, et lui inflige un coup critique !";
-        return $status;
-    }
 
     public function attack($target) {
         if ($this->deathArrow) {
@@ -44,9 +41,19 @@ class Archer extends Character
         return $status;
     }
 
+    
     public function attackDague($target) {
         $target->setHealthPoints($this->damage/2);
         $status = "$this->name lance une Frappe Latérale à $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
         return $status;
     }
+
+
+    public function deathArrow() {
+        $this->deathArrow= true;
+        $status = "$this->name touche son adversaire avec un Tir Mortel, et lui inflige un coup critique !";
+        return $status;
+    }
+
+
 }
