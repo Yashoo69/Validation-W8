@@ -24,7 +24,7 @@ class Archer extends Character
 
     public function deathArrow() {
         $this->deathArrow= true;
-        $status = "$this->name touche son adversaire et lui inflige un coup critique ";
+        $status = "$this->name touche son adversaire et lui inflige un coup critique !";
         return $status;
     }
 
@@ -32,10 +32,10 @@ class Archer extends Character
         if ($this->deathArrow) {
             $this->deathArrow = false;
             $rand = rand(15, 30)/10;
-            $critic = $this->damage * $rand;
-            $target->setHealthPoints($critic);
+            $DamageCritic = $this->damage * $rand;
+            $target->setHealthPoints($DamageCritic);
             $this->arrow -= 1;
-            $status = "$this->name tire une fleches puissante sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
+            $status = "$this->name tire une fleche surpuissante sur $target->name ! Il reste $target->healthPoints points de vie à $target->name !";
         } else{
             $target->setHealthPoints($this->damage);
             $this->arrow -= 1;
